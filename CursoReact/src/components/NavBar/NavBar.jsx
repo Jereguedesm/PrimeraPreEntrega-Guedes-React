@@ -1,22 +1,24 @@
+import React from "react";
 import "./NavBar.css"
-import "../Cart/Cart"
+import Cart from "../Cart/Cart"
+
 
 
 const NavBar = () => {
-    <div className="Header">
-            <h1>PCMAX</h1>
-            <div>
-            <ul className="UL">
-                <li className="LI">Inicio</li>
-                <li className="LI">Productos</li>
-                <li className="LI">Carrito</li>
-                <li className="LI">
-                    
-                </li>
-            </ul>
-            <img src="../assets/svgCarrito.svg" alt="" />
-            </div>
-        </div>
+    return (
+        <nav>
+        <ul className="UL">
+            <li className="LI">Inicio</li>
+            <li className="LI">Productos</li>
+            <li className="LI">Ofertas</li>
+            <li className="LI">
+                <Cart/>
+            </li>
+        </ul>
+    </nav>
+    )
 }
 
 export default NavBar;
+
+

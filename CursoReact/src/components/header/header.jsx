@@ -1,11 +1,12 @@
+import React from "react";
 import "./header.css"
-import "../NavBar/NavBar"
+
 
 
 const Header = () => {
     return ( 
         <div>
-            <NavBar/>
+            <h1>PCMAX</h1>
         </div>
     )
 }

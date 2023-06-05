@@ -2,9 +2,9 @@ import "./Cart.css"
 
 
 const Cart = () => {
-    <div>
+    return (
         <img src="../../assets/svgCarrito.svg" alt="" />
-    </div>
+    )
 }
 
 export default Cart;
