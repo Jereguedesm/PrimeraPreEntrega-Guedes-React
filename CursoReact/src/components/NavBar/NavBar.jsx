@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css"
-import Cart from "../Cart/Cart"
+import CartWidget from "../CartWidget/CartWidget";
 
 
 
@@ -12,7 +12,7 @@ const NavBar = () => {
             <li className="LI">Productos</li>
             <li className="LI">Ofertas</li>
             <li className="LI">
-                <Cart/>
+                <CartWidget/>
             </li>
         </ul>
     </nav>

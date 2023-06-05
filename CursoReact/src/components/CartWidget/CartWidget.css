@@ -1,0 +1,4 @@
+.CartWidget{
+    display: flex;
+    flex-direction: row;
+}
