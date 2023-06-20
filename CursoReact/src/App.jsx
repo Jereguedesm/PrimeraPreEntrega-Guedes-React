@@ -1,25 +1,27 @@
-import { useState } from "react";
+import React, {useState} from "react";
 import "./App.css";
-import Header from "./components/header/header";
+import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import UserList from "./components/UserList/UserList";
 
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
+  
   return (
-    <>
-    <header>
-      <Header/>
-      <NavBar/>
-      <div>
-      <ItemListContainer greeting={"Muy buenos días!"}/>
-    </div>
-    </header>
-    
-    </>
-  );
+      <>
+      <header>
+        <Header/>
+        <NavBar/>
+        <div>
+        <ItemListContainer greeting={"Muy buenos días!"}/>
+      </div>
+      </header>
+      <main>
+      <UserList/>
+      </main>
+      </>
+    )
 }
 
 export default App;
