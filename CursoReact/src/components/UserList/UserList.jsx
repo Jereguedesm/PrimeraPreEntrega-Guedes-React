@@ -5,13 +5,11 @@ import CardUser from "../CardUser/CardUser"
 
 
 
-
-
 const UserList = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        axios("https://fakestoreapi.com/products").then(json => setItems(json.data))
+        axios(`${process.env.REACT_APP_BASE_URL}`).then(json => setItems(json.data))
         .catch(error => console.error("Error al obtener los datos:", error));
     }, [])
 
@@ -21,7 +19,7 @@ const UserList = () => {
         {items && items.map((item) => {
             return (
             <div key={item.id}>
-                <CardUser/>
+                <CardUser item={item}/>
             </div>
             );
         })}
