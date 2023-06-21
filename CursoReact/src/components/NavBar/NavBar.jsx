@@ -25,16 +25,16 @@ const NavBar = () => {
             <Link className="li" to="/contact">
             Contact
             </Link>
-            <Link className="li" to="/electronics">
+            <Link className="li" to="/category/electronics">
             Electrónica
             </Link>
-            <Link className="li" to="/jewelery">
+            <Link className="li" to="/category/jewelery">
             Joyería
             </Link>
-            <Link className="li" to="/mensClothing">
+            <Link className="li" to="/men's clothing">
             Prendas de mujer
             </Link>
-            <Link className="li" to="/womensClothing">
+            <Link className="li" to="/category/women's clothing">
             Prendas de hombre
             </Link>
         </ul>

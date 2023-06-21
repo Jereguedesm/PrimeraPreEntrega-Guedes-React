@@ -11,7 +11,7 @@ const DetailPage = () => {
     const [item, setItem] = useState({})
 
     let {id} = useParams()
-    console.log(id)
+    console.log(item)
 
     useEffect(() => {
         axios(`https://fakestoreapi.com/products/${id}`).then(json => setItem(json.data))

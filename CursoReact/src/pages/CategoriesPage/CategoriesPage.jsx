@@ -9,27 +9,33 @@ import CardUser from '../../components/CardUser/CardUser'
 
 
 const CategoriesPage = () => {
+  const [items, setItems] = useState([])
 
 let {categoryId} = useParams()
 
+console.log("categoryId", categoryId);
+  console.log("chars", chars);
+
+let filteredItems = items.filter((item) => {
+  return item.category = categoryId
+})
+
+console.log("filteredItems", filteredItems);
+
 useEffect(() => {
-  axios(`https://fakestoreapi.com/products/${id}`).then(json => setItem(json.data))
+  axios(`https://fakestoreapi.com/products/`).then(json => setItems(json.data))
 }, [])
-
-
 
 return (
   <div className="userList">
-      {items && items.map((item) => {
-          return (
-          <div key={item.id}>
-
-                  <CardUser item={item}/>
-
-          </div>
-          );
-      })}
-  </div>
+        {filteredItems && filteredItems.map((item) => {
+            return (
+            <div key={item.id}>
+                    <CardUser item={item}/>
+            </div>
+            );
+        })}
+    </div>
 )
 }
 
