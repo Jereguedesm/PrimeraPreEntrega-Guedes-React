@@ -1,16 +1,27 @@
 import React, {useState} from "react";
 import "./App.css";
+
+
+//Components
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import UserList from "./components/UserList/UserList";
 
 
-const App = () => {
-  
-  return (
-      <>
-      <header>
+//React Router Dom
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+
+
+//pages
+import HomePage from "./pages/HomePage/HomePage";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import DetailPage from "./pages/DetailPage/DetailPage";
+import Categories from "./pages/CategoriesPage/CategoriesPage";
+
+/*
+<header>
         <Header/>
         <NavBar/>
         <div>
@@ -18,9 +29,29 @@ const App = () => {
       </div>
       </header>
       <main>
-      <UserList/>
+      
       </main>
-      </>
+*/
+
+
+
+
+const App = () => {
+  
+  return (
+      <Router>
+        <div className="App">
+          <Header/>
+          <NavBar/>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/item/:id" element={<DetailPage/>}/>
+          
+        </Routes>
+        </div>
+      </Router>
     )
 }
 
