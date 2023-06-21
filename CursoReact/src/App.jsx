@@ -18,7 +18,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
-import Categories from "./pages/CategoriesPage/CategoriesPage";
+import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
 
 /*
 <header>
@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/item/:id" element={<DetailPage/>}/>
-          
+          <Route path="/item/:categoryId" element={<CategoriesPage/>}/>
         </Routes>
         </div>
       </Router>

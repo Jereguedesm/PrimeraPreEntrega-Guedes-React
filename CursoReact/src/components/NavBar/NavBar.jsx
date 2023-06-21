@@ -25,6 +25,18 @@ const NavBar = () => {
             <Link className="li" to="/contact">
             Contact
             </Link>
+            <Link className="li" to="/electronics">
+            Electrónica
+            </Link>
+            <Link className="li" to="/jewelery">
+            Joyería
+            </Link>
+            <Link className="li" to="/mensClothing">
+            Prendas de mujer
+            </Link>
+            <Link className="li" to="/womensClothing">
+            Prendas de hombre
+            </Link>
         </ul>
     </nav>
     )
