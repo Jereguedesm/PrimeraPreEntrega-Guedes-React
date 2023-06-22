@@ -14,10 +14,10 @@ const CategoriesPage = () => {
 let {categoryId} = useParams()
 
 console.log("categoryId", categoryId);
-  console.log("chars", chars);
+  console.log("items", items);
 
 let filteredItems = items.filter((item) => {
-  return item.category = categoryId
+  return item.category === categoryId
 })
 
 console.log("filteredItems", filteredItems);
