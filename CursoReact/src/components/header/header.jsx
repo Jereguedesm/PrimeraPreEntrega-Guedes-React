@@ -6,11 +6,11 @@ import {Link} from "react-router-dom"
 
 const Header = () => {
     return ( 
-        <div>
+        <header>
             <Link to="/">
             <h1>PCMAX</h1>
             </Link>
-        </div>
+        </header>
     )
 }
 export default Header;

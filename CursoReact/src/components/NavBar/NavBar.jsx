@@ -31,10 +31,10 @@ const NavBar = () => {
             <Link className="li" to="/category/jewelery">
             Joyería
             </Link>
-            <Link className="li" to="/category/men's clothing">
+            <Link className="li" to="/category/women's clothing">
             Prendas de mujer
             </Link>
-            <Link className="li" to="/category/women's clothing">
+            <Link className="li" to="/category/men's clothing">
             Prendas de hombre
             </Link>
         </ul>

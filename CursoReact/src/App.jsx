@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import UserList from "./components/UserList/UserList";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
 //React Router Dom
@@ -31,6 +32,11 @@ import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
       <main>
       
       </main>
+
+
+
+      <Route path="/item/:id" element={<DetailPage/>}/>
+                <Route path="/category/:categoryId" element={<CategoriesPage/>}/>
 */
 
 
@@ -44,10 +50,10 @@ const App = () => {
           <Header/>
           <NavBar/>
         <Routes>
-          <Route path="/" element={<HomePage/>}/>
+          <Route path="/" element={<ItemListContainer/>}/>
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
-          <Route path="/item/:id" element={<DetailPage/>}/>
+          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
           <Route path="/category/:categoryId" element={<CategoriesPage/>}/>
         </Routes>
         </div>
